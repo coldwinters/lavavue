@@ -10,6 +10,11 @@ let routes = [
         name: 'about',
         path: '/about',
         component: require('../components/About')
+    },
+    {
+        name: 'show',
+        path: '/:id',
+        component: require('../components/Show')
     }
 ];
 

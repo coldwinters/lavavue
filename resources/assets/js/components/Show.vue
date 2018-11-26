@@ -3,11 +3,11 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Index Page</div>
+                    <div class="panel-heading">Admin Detail</div>
 
                     <div class="panel-body">
-                        <div v-for="admin in admins" :key="admin.id" class="bs-callout bs-callout-danger">
-                            <router-link :to="{ name: 'show', params: {id: admin.id} }"><h4>{{ admin.name }}</h4></router-link>
+                        <div class="bs-callout bs-callout-danger">
+                            <h4>{{ admin.name }}</h4>
                             <p>{{ admin.email }}</p>
                         </div>
                     </div>
@@ -20,13 +20,13 @@
 <script>
     export default {
         mounted() {
-            axios.get('/api/admins').then(response => {
-                this.admins = response.data.data
+            axios.get('/api/admins/' + this.$route.params.id).then(response => {
+                this.admin = response.data
             })
         },
         data () {
             return {
-                admins: []
+                admin: {}
             }
         }
     }
