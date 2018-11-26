@@ -191,6 +191,16 @@ return [
          * IDE助手
          */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+        /**
+         * Dingo/Api
+         */
+        Dingo\Api\Provider\LaravelServiceProvider::class,
+
+        /**
+         * JWT
+         */
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
     ],
 
     /*
@@ -241,6 +251,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
+        'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
 
     ],
 
