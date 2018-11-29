@@ -12,5 +12,9 @@
 */
 
 Route::any('{all}', function () {
-    return view('welcome');
+    return view('layouts.main');
 })->where(['all' => '.*']);
+
+Route::get('welcome', function () {
+    return view('welcome');
+});

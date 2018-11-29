@@ -21,6 +21,8 @@
     "dependencies": {
         "element-ui": "^2.4.11",
         "less-loader": "^4.1.0",
+        "stylus": "^0.54.5",
+        "stylus-loader": "^3.0.2",
         "vue-router": "^3.0.2",
         "vux": "^2.9.2",
         "vux-loader": "^1.2.9"
